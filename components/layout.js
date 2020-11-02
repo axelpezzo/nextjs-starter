@@ -17,6 +17,7 @@ export default function Layout({ children, home }) {
               className={`${styles.headerHomeImage}`}
               alt={name}
               unsized={true}
+              loading="lazy"
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>

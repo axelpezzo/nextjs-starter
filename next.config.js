@@ -4,6 +4,6 @@ module.exports = {
     iconSizes: [16, 32, 64],
     domains: [],
     path: '/_next/image',
-    loader: 'vercel',
+    loader: 'default',
   },
 }
