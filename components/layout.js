@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from './layout.module.scss'
 import utilStyles from '../styles/utils.module.scss'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const name = 'Your Name'
 
@@ -11,10 +12,11 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
-            <img
+            <Image
               src="/images/profile.jpg"
-              className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
+              className={`${styles.headerHomeImage}`}
               alt={name}
+              unsized={true}
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
@@ -22,10 +24,11 @@ export default function Layout({ children, home }) {
           <>
             <Link href="/">
               <a>
-                <img
+                <Image
                   src="/images/profile.jpg"
                   className={`${styles.headerImage} ${utilStyles.borderCircle}`}
                   alt={name}
+                  unsized={true}
                 />
               </a>
             </Link>
