@@ -14,15 +14,13 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
-            <LazyLoadComponent>
-              <Image
-                src="/images/profile.jpg"
-                className={`${styles.headerImage}`}
-                alt={name}
-                width="612"
-                height="816"
-              />
-            </LazyLoadComponent>
+            <Image
+              src="/images/profile.jpg"
+              className={`${styles.headerImage}`}
+              alt={name}
+              width="612"
+              height="816"
+            />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
         ) : (
