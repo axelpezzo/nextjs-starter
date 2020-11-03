@@ -12,7 +12,7 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
-            <img src={'/images/profile.jpg'} />
+            <img src={'/images/profile.jpg?webp'} />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
         ) : (
