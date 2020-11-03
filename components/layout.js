@@ -19,7 +19,8 @@ export default function Layout({ children, home }) {
                 src="/images/profile.jpg"
                 className={`${styles.headerImage}`}
                 alt={name}
-                unsized={true}
+                width="612"
+                height="816"
               />
             </LazyLoadComponent>
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
