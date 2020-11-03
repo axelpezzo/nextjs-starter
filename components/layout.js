@@ -6,7 +6,6 @@ import Image from 'next/image'
 
 const name = 'Your Name'
 
-
 export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
