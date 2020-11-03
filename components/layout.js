@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import styles from './layout.module.scss'
 import utilStyles from '../styles/utils.module.scss'
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -12,7 +14,14 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
-            <img src={'/images/profile.jpg?webp'} />
+            <LazyLoadComponent>
+              <Image
+                src="/images/profile.jpg"
+                className={`${styles.headerImage}`}
+                alt={name}
+                unsized={true}
+              />
+            </LazyLoadComponent>
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
         ) : (
